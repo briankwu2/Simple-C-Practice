@@ -63,8 +63,8 @@ int main(int argc, char const *argv[])
 
     printf("The minimum number in the list is: %d\n", min);
     printf("The maximum number in the list is: %d\n", max);
-    printf("The variance is: %f", variance );
-    printf("The standard deviation is: %f", standDev);
+    printf("The variance is: %f\n", variance );
+    printf("The standard deviation is: %f\n", standDev);
 
     return 0;
 }
