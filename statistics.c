@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main(int argc, char const *argv[])
 {
@@ -37,7 +38,7 @@ int main(int argc, char const *argv[])
     }
     fclose(inputFile);
 
-    long standDev = 0;
+    double variance = 0;
     // Calculates average
     int avg = total / count;
 
@@ -52,12 +53,18 @@ int main(int argc, char const *argv[])
     // Re-loops through the file to calculate variance
     while(fscanf(inputFile, "%ld", &number) != EOF)
     {
-        standDev += (number - avg) * (number - avg);
+        variance += (number - avg) * (number - avg);
     }
+    
+    variance = variance / count;
+
+    double standDev = sqrt(variance);
     
 
     printf("The minimum number in the list is: %d\n", min);
     printf("The maximum number in the list is: %d\n", max);
+    printf("The variance is: %f", variance );
+    printf("The standard deviation is: %f", standDev);
 
     return 0;
 }
