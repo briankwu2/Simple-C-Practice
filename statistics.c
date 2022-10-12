@@ -2,6 +2,16 @@
 #include <stdlib.h>
 #include <math.h>
 
+
+/*
+Need to run with "gcc statistics.c -o statistics -lm", because the math library needs to be linked
+
+
+
+
+
+*/
+
 int main(int argc, char const *argv[])
 {
     FILE * inputFile;
@@ -63,8 +73,8 @@ int main(int argc, char const *argv[])
 
     printf("The minimum number in the list is: %d\n", min);
     printf("The maximum number in the list is: %d\n", max);
-    printf("The variance is: %f\n", variance );
-    printf("The standard deviation is: %f\n", standDev);
+    printf("The variance is: %.2f\n", variance );
+    printf("The standard deviation is: %.2f\n", standDev);
 
     return 0;
 }
